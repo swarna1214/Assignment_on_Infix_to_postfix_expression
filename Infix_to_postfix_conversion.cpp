@@ -43,8 +43,9 @@ void evaluate(ll k)
 }
 int main()
 {
-    string input[1000];                     //As there might be blank space between expressions, we are taking the input as an array of strings.
-    ll i,j,k=0,c=0;                         //  As a result we will be able to take the whole infix expression and evaluate as well.
+    string input[1000];                     
+    ll i,j,k=0,c=0;  
+    cout<<"Enter expression"<<endl;
     for(i=0;; i++)
     {
         cin>>input[i];
@@ -64,7 +65,7 @@ int main()
 
     for(i=0; i<c; i++)
     {
-        for(j=0; input[i][j]!='\0'; j++)              //Working with each part of the string array
+        for(j=0; input[i][j]!='\0'; j++)             
         {
             if(precedence[input[i][j]]==0)            // if precedence is zero for some character of a string it means its not an operator(because we have already set
             {                                                                       // precedence(non-zero value) for each operator, hence its a numeric value
